@@ -61,26 +61,25 @@
 </div>
 </script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
-<script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js">
-<script src="https://webtracking-v01.bpmonline.com/JS/create-object.js">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
+<script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
 <script>
-
-<var config = {
-fields: {
-"Name": "#name-30a4", // Name of a contact
-"Email": "#email-cd2c", // Contact's email
-"Account": "#address-5b62" // Company
-},
-contactFields: {
-"Name": "#name-30a4", // Name of a contact
-"Email": "#email-cd2c", // Contact's mobile phone
-"Account": "#address-5b62" // Contact's email
-},
-customFields: {"WebFormId":"c2164e2d-33ad-4387-9814-93cb470e9044"},
-landingId: "c2164e2d-33ad-4387-9814-93cb470e9044",
-serviceUrl: "https://metropole-gestion.creatio.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
-redirectUrl: ""
+/**
+* Replace the "css-selector" placeholders in the code below with the element selectors on your landing page.
+* You can use #id or any other CSS selector that will define the input field explicitly.
+* Example: "Email": "#MyEmailField".
+* If you don't have a field from the list below placed on your landing, leave the placeholder or remove the line.
+*/
+var config = {
+    fields: {
+        "Name": "#name-30a4", // Name of a visitor, submitting the page
+        "Email": "#email-cd2c", // Visitor's email
+        "Account" : "#address-5b62"
+    },
+    landingId: "99b65600-7f79-44c8-b7ef-84aeaafaee81",
+    serviceUrl: "https://192.168.1.151:8091/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+    redirectUrl: ""
 };
 /**
 * The function below creates a object from the submitted data.
@@ -88,15 +87,17 @@ redirectUrl: ""
 * Example: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
 */
 function createObject() {
-landing.createObjectFromLanding(config);
+    landing.createObjectFromLanding(config)
 }
 /**
 * The function below inits landing page using URL parameters.
 */
 function initLanding() {
-landing.initLanding(config);
+    landing.initLanding(config)
 }
-jQuery(document).ready(initLanding);>
+jQuery(document).ready(initLanding)
 </script>
+
+
 </body>
 </html>
