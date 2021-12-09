@@ -295,11 +295,12 @@ for (var i = 0; i < all_spc.length; i++)
     </div>
   </div>
 </form>
-<script type="text/javascript">JotForm.forwardToEu=true;</script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
 <script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
 <script>
+
 /**
 * Replace the "css-selector" placeholders in the code below with the element selectors on your landing page.
 * You can use #id or any other CSS selector that will define the input field explicitly.
@@ -308,13 +309,27 @@ for (var i = 0; i < all_spc.length; i++)
 */
 var config = {
     fields: {
-        "Name": "#last_4", // Name of a visitor, submitting the page
-        "Email": "#input_6", // Visitor's email
-        "Commentary": "#first_4" // Notes
+        "Name": "css-selector", // Name of a visitor, submitting the page
+        "Email": "css-selector", // Visitor's email
+        "Zip": "css-selector", // Visitor's ZIP code
+        "MobilePhone": "css-selector", // Visitor's phone number
+        "Company": "css-selector", // Name of a company (for business landing pages)
+        "Industry": "css-selector", // Company industry (for business landing pages)
+        "FullJobTitle": "css-selector", // Visitor's job title (for business landing pages)
+        "UseEmail": "css-selector", // Logical value: 'true' equals to visitor's opt-in to receive emails
+        "City": "css-selector", // City
+        "Country": "css-selector", // Country
+        "Commentary": "css-selector" // Notes
     },
-    landingId: "8e061e1a-da4c-49e6-81f9-b33d6067b287",
-    serviceUrl: "https://217.128.163.191:8091/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
-    redirectUrl: "https://rochermarvyn.github.io/LandingPages/index.html#"
+    contactFields: {
+        "FullName": "css-selector", // Name of a contact
+        "Phone": "css-selector", // Contact's mobile phone
+        "Email": "css-selector" // Contact's email
+    },
+    customFields: {},
+    landingId: "fcf6f3c8-060a-4d47-adba-6cc331bde07d",
+    serviceUrl: "https://109919-crm-bundle.creatio.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+    redirectUrl: "https://rochermarvyn.github.io/LandingPages/"
 };
 /**
 * The function below creates a object from the submitted data.
@@ -322,13 +337,14 @@ var config = {
 * Example: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
 */
 function createObject() {
-    landing.createObjectFromLanding(config)
+    landing.createObjectFromLanding(config);
 }
 /**
 * The function below inits landing page using URL parameters.
 */
 function initLanding() {
-    landing.initLanding(config)
+    landing.initLanding(config);
 }
-jQuery(document).ready(initLanding)
+jQuery(document).ready(initLanding);
 </script>
+
