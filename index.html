@@ -58,58 +58,6 @@
 </div>
 <h1 class="u-align-center u-custom-font u-font-arial u-hover-feature u-text u-text-1">Jeudi 18 novembre 2021</h1>
 </div>
-
-
-
-</script>
-
-
-
-<var config = {
-fields: {
-"FullName": "#name-30a4", // Name of a contact
-"Email": "#email-cd2c", // Contact's email
-"Account": "#address-5b62" // Company
-}>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
-<script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js">
-<script src="https://webtracking-v01.bpmonline.com/JS/create-object.js">
-<script>
-
-
-
-
-</var config = {
-fields: {
-"Name": "#name-30a4", // Name of a contact
-"Email": "#email-cd2c", // Contact's email
-"Account": "#address-5b62" // Company
-},
-contactFields: {
-"Name": "#name-30a4", // Name of a contact
-"Email": "#email-cd2c", // Contact's mobile phone
-"Account": "#address-5b62" // Contact's email
-},
-customFields: {"WebFormId":"c2164e2d-33ad-4387-9814-93cb470e9044"},
-landingId: "c2164e2d-33ad-4387-9814-93cb470e9044",
-serviceUrl: "https://metropole-gestion.creatio.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
-redirectUrl: ""
-};
-/**
-* The function below creates a object from the submitted data.
-* Bind this function call to the "onSubmit" event of the form or any other elements events.
-* Example: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
-*/
-function createObject() {
-landing.createObjectFromLanding(config);
-}
-/**
-* The function below inits landing page using URL parameters.
-*/
-function initLanding() {
-landing.initLanding(config);
-}
-jQuery(document).ready(initLanding);>
 </script>
 </body>
 </html>
