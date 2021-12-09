@@ -42,15 +42,15 @@
 </div>
 <div class="u-form-address u-form-group u-form-group-3">
 <label for="address-5b62" class="u-form-control-hidden u-label"></label>
-<input type="text" placeholder="SociŽtŽ" id="address-5b62" name="Compte" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-white u-input-3" required="">
+<input type="text" placeholder="Société" id="address-5b62" name="Compte" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-white u-input-3" required="">
 </div>
 <div class="u-align-center u-form-group u-form-submit u-form-group-4">
 <a href="#" class="u-border-2 u-border-grey-50 u-btn u-btn-submit u-button-style u-grey-50 u-hover-black u-text-hover-white u-text-white u-btn-1">INSCRIPTION<br>
 </a>
 <input type="submit" value="submit" class="u-form-control-hidden" name="Register" placeholder="Inscription" required="required" onSubmit="createObject(); return false">
 </div>
-<div class="u-form-send-message u-form-send-success"> Votre message a bien ŽtŽ envoyŽ. </div>
-<div class="u-form-send-error u-form-send-message"> L'envoi rencontre un problme. Merci de bien vouloir rŽessayer ou de vous mettre directement en contact avec notre Žquipe commerciale. </div>
+<div class="u-form-send-message u-form-send-success"> Votre message a bien été envoyé. </div>
+<div class="u-form-send-error u-form-send-message"> L'envoi rencontre un problème. Merci de bien vouloir réessayer ou de vous mettre directement en contact avec notre équipe commerciale. </div>
 <input type="hidden" value="" name="recaptchaResponse">
 </form>
 </div>
@@ -58,58 +58,4 @@
 </div>
 <h1 class="u-align-center u-custom-font u-font-arial u-hover-feature u-text u-text-1">Jeudi 18 novembre 2021</h1>
 </div>
-
-
-
 </script>
-
-
-
-<var config = {
-fields: {
-"FullName": "#name-30a4", // Name of a contact
-"Email": "#email-cd2c", // Contact's email
-"Account": "#address-5b62" // Company
-}>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
-<script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js">
-<script src="https://webtracking-v01.bpmonline.com/JS/create-object.js">
-<script>
-
-
-
-
-</var config = {
-fields: {
-"Name": "#name-30a4", // Name of a contact
-"Email": "#email-cd2c", // Contact's email
-"Account": "#address-5b62" // Company
-},
-contactFields: {
-"Name": "#name-30a4", // Name of a contact
-"Email": "#email-cd2c", // Contact's mobile phone
-"Account": "#address-5b62" // Contact's email
-},
-customFields: {"WebFormId":"c2164e2d-33ad-4387-9814-93cb470e9044"},
-landingId: "c2164e2d-33ad-4387-9814-93cb470e9044",
-serviceUrl: "https://metropole-gestion.creatio.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
-redirectUrl: ""
-};
-/**
-* The function below creates a object from the submitted data.
-* Bind this function call to the "onSubmit" event of the form or any other elements events.
-* Example: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
-*/
-function createObject() {
-landing.createObjectFromLanding(config);
-}
-/**
-* The function below inits landing page using URL parameters.
-*/
-function initLanding() {
-landing.initLanding(config);
-}
-jQuery(document).ready(initLanding);>
-</script>
-</body>
-</html>
