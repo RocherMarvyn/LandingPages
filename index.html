@@ -202,7 +202,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Formulai
     /* Injected CSS Code */
 </style>
 
-<form class="jotform-form" action="https://submit.jotformeu.com/submit/213423849174358/" method="post" name="form_213423849174358" id="213423849174358" accept-charset="utf-8" autocomplete="on">
+<form class="jotform-form" method="post" name="form_213423849174358" id="213423849174358" accept-charset="utf-8" autocomplete="on" onSubmit="createLead(); return false">
   <input type="hidden" name="formID" value="213423849174358" />
   <input type="hidden" id="JWTContainer" value="" />
   <input type="hidden" id="cardinalOrderNumber" value="" />
@@ -296,3 +296,39 @@ for (var i = 0; i < all_spc.length; i++)
   </div>
 </form>
 <script type="text/javascript">JotForm.forwardToEu=true;</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
+<script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
+<script>
+/**
+* Replace the "css-selector" placeholders in the code below with the element selectors on your landing page.
+* You can use #id or any other CSS selector that will define the input field explicitly.
+* Example: "Email": "#MyEmailField".
+* If you don't have a field from the list below placed on your landing, leave the placeholder or remove the line.
+*/
+var config = {
+    fields: {
+        "Name": "#last_4", // Name of a visitor, submitting the page
+        "Email": "#input_6", // Visitor's email
+        "Commentary": "#first_4" // Notes
+    },
+    landingId: "8e061e1a-da4c-49e6-81f9-b33d6067b287",
+    serviceUrl: "https://217.128.163.191:8091/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+    redirectUrl: "https://rochermarvyn.github.io/LandingPages/index.html#"
+};
+/**
+* The function below creates a object from the submitted data.
+* Bind this function call to the "onSubmit" event of the form or any other elements events.
+* Example: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
+*/
+function createLead() {
+    landing.createObjectFromLanding(config)
+}
+/**
+* The function below inits landing page using URL parameters.
+*/
+function initLanding() {
+    landing.initLanding(config)
+}
+jQuery(document).ready(initLanding)
+</script>
