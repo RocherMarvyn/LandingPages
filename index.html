@@ -31,6 +31,7 @@
 <div class="u-container-layout u-container-layout-1">
 <img class="u-align-center u-image u-image-default u-image-2" src="images/LeseRDV1.png" alt="" data-image-width="315" data-image-height="144">
 <div class="u-form u-form-1">
+<form action="scripts/form-carousel_e7fe.php" method="POST" class="u-clearfix u-form-spacing-7 u-form-vertical u-inner-form" style="padding: 0px;" source="customphp" name="form">
 <div class="u-form-group u-form-name u-form-group-1">
 <label for="name-30a4" class="u-form-control-hidden u-label">Name</label>
 <input type="text" placeholder="Nom" id="name-30a4" name="Nom" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-white u-input-1" required="">
@@ -41,40 +42,58 @@
 </div>
 <div class="u-form-address u-form-group u-form-group-3">
 <label for="address-5b62" class="u-form-control-hidden u-label"></label>
-<input type="text" placeholder="Société" id="address-5b62" name="Compte" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-white u-input-3" required="">
+<input type="text" placeholder="SociŽtŽ" id="address-5b62" name="Compte" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-white u-input-3" required="">
 </div>
-<form type="submit" value="submit" class="u-form-control-hidden" name="Register" placeholder="Inscription" required="required" onSubmit="createObject(); return false">
-  </form>
+<div class="u-align-center u-form-group u-form-submit u-form-group-4">
+<a href="#" class="u-border-2 u-border-grey-50 u-btn u-btn-submit u-button-style u-grey-50 u-hover-black u-text-hover-white u-text-white u-btn-1">INSCRIPTION<br>
+</a>
+<input type="submit" value="submit" class="u-form-control-hidden" name="Register" placeholder="Inscription" required="required" onSubmit="createObject(); return false">
+</div>
+<div class="u-form-send-message u-form-send-success"> Votre message a bien ŽtŽ envoyŽ. </div>
+<div class="u-form-send-error u-form-send-message"> L'envoi rencontre un problme. Merci de bien vouloir rŽessayer ou de vous mettre directement en contact avec notre Žquipe commerciale. </div>
+<input type="hidden" value="" name="recaptchaResponse">
+</form>
 </div>
 </div>
 </div>
 <h1 class="u-align-center u-custom-font u-font-arial u-hover-feature u-text u-text-1">Jeudi 18 novembre 2021</h1>
 </div>
+
+
+
 </script>
 
 
 
-
-
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
-<script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
+<var config = {
+fields: {
+"FullName": "#name-30a4", // Name of a contact
+"Email": "#email-cd2c", // Contact's email
+"Account": "#address-5b62" // Company
+}>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+<script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js">
+<script src="https://webtracking-v01.bpmonline.com/JS/create-object.js">
 <script>
-/**
-* Replace the "css-selector" placeholders in the code below with the element selectors on your landing page.
-* You can use #id or any other CSS selector that will define the input field explicitly.
-* Example: "Email": "#MyEmailField".
-* If you don't have a field from the list below placed on your landing, leave the placeholder or remove the line.
-*/
-var config = {
-    fields: {
-        "Name": "#name-30a4", // Name of a visitor, submitting the page
-        "Email": "#email-cd2c", // Visitor's email
-        "Company": "#address-5b62", // Name of a company (for business landing pages)
-    },
-    landingId: "8e061e1a-da4c-49e6-81f9-b33d6067b287",
-    serviceUrl: "https://217.128.163.191:8091/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
-    redirectUrl: "https://rochermarvyn.github.io/LandingPages/index.html#"
+
+
+
+
+</var config = {
+fields: {
+"Name": "#name-30a4", // Name of a contact
+"Email": "#email-cd2c", // Contact's email
+"Account": "#address-5b62" // Company
+},
+contactFields: {
+"Name": "#name-30a4", // Name of a contact
+"Email": "#email-cd2c", // Contact's mobile phone
+"Account": "#address-5b62" // Contact's email
+},
+customFields: {"WebFormId":"c2164e2d-33ad-4387-9814-93cb470e9044"},
+landingId: "c2164e2d-33ad-4387-9814-93cb470e9044",
+serviceUrl: "https://metropole-gestion.creatio.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+redirectUrl: ""
 };
 /**
 * The function below creates a object from the submitted data.
@@ -82,18 +101,15 @@ var config = {
 * Example: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
 */
 function createObject() {
-    landing.createObjectFromLanding(config)
+landing.createObjectFromLanding(config);
 }
 /**
 * The function below inits landing page using URL parameters.
 */
 function initLanding() {
-    landing.initLanding(config)
+landing.initLanding(config);
 }
-jQuery(document).ready(initLanding)
+jQuery(document).ready(initLanding);>
 </script>
-  
-  
-  
 </body>
 </html>
