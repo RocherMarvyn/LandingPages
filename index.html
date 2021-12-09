@@ -42,16 +42,13 @@
 </div>
 <div class="u-form-address u-form-group u-form-group-3">
 <label for="address-5b62" class="u-form-control-hidden u-label"></label>
-<input type="text" placeholder="SociŽtŽ" id="address-5b62" name="Compte" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-white u-input-3" required="">
+<input type="text" placeholder="Société" id="address-5b62" name="Compte" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-white u-input-3" required="">
 </div>
 <div class="u-align-center u-form-group u-form-submit u-form-group-4">
 <a href="#" class="u-border-2 u-border-grey-50 u-btn u-btn-submit u-button-style u-grey-50 u-hover-black u-text-hover-white u-text-white u-btn-1">INSCRIPTION<br>
 </a>
-<input type="submit" value="submit" class="u-form-control-hidden" name="Register" placeholder="Inscription" required="required" onSubmit="createObject(); return false">
+<input type="submit" value="submit" class="u-form-control-hidden" name="Register" placeholder="Inscription" required="required" onSubmit="createLead(); return false">
 </div>
-<div class="u-form-send-message u-form-send-success"> Votre message a bien ŽtŽ envoyŽ. </div>
-<div class="u-form-send-error u-form-send-message"> L'envoi rencontre un problme. Merci de bien vouloir rŽessayer ou de vous mettre directement en contact avec notre Žquipe commerciale. </div>
-<input type="hidden" value="" name="recaptchaResponse">
 </form>
 </div>
 </div>
@@ -59,5 +56,44 @@
 <h1 class="u-align-center u-custom-font u-font-arial u-hover-feature u-text u-text-1">Jeudi 18 novembre 2021</h1>
 </div>
 </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
+<script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
+<script>
+/**
+* Replace the "css-selector" placeholders in the code below with the element selectors on your landing page.
+* You can use #id or any other CSS selector that will define the input field explicitly.
+* Example: "Email": "#MyEmailField".
+* If you don't have a field from the list below placed on your landing, leave the placeholder or remove the line.
+*/
+var config = {
+    fields: {
+        "Name": "#name-30a4", // Name of a visitor, submitting the page
+        "Email": "#email-cd2c", // Visitor's email
+        "Company": "#address-5b62", // Name of a company (for business landing pages)
+    },
+    landingId: "8e061e1a-da4c-49e6-81f9-b33d6067b287",
+    serviceUrl: "https://217.128.163.191:8091/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+    redirectUrl: "https://rochermarvyn.github.io/LandingPages/index.html#"
+};
+/**
+* The function below creates a object from the submitted data.
+* Bind this function call to the "onSubmit" event of the form or any other elements events.
+* Example: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
+*/
+function createObject() {
+    landing.createObjectFromLanding(config)
+}
+/**
+* The function below inits landing page using URL parameters.
+*/
+function initLanding() {
+    landing.initLanding(config)
+}
+jQuery(document).ready(initLanding)
+</script>
+  
+  
+  
 </body>
 </html>
