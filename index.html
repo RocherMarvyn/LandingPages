@@ -202,7 +202,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Formulai
     /* Injected CSS Code */
 </style>
 
-<form class="jotform-form" method="post" name="form_213423849174358" id="213423849174358" accept-charset="utf-8" autocomplete="on" onSubmit="createLead(); return false">
+<form class="jotform-form" method="post" name="form_213423849174358" id="213423849174358" accept-charset="utf-8" autocomplete="on" onSubmit="createObject(); return false">
   <input type="hidden" name="formID" value="213423849174358" />
   <input type="hidden" id="JWTContainer" value="" />
   <input type="hidden" id="cardinalOrderNumber" value="" />
@@ -321,7 +321,7 @@ var config = {
 * Bind this function call to the "onSubmit" event of the form or any other elements events.
 * Example: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
 */
-function createLead() {
+function createObject() {
     landing.createObjectFromLanding(config)
 }
 /**
