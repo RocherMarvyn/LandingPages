@@ -295,8 +295,6 @@ for (var i = 0; i < all_spc.length; i++)
     </div>
   </div>
 </form>
-<script type="text/javascript">JotForm.forwardToEu=true;</script>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
 <script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
@@ -310,9 +308,17 @@ for (var i = 0; i < all_spc.length; i++)
 */
 var config = {
     fields: {
-        "Name": "#first_4", // Name of a visitor, submitting the page
-        "Email": "#input_6", // Visitor's email
-        "Commentary": "#last_4" // Notes
+        "Name": "css-selector", // Name of a visitor, submitting the page
+        "Email": "css-selector", // Visitor's email
+        "Zip": "css-selector", // Visitor's ZIP code
+        "MobilePhone": "css-selector", // Visitor's phone number
+        "Company": "css-selector", // Name of a company (for business landing pages)
+        "Industry": "css-selector", // Company industry (for business landing pages)
+        "FullJobTitle": "css-selector", // Visitor's job title (for business landing pages)
+        "UseEmail": "css-selector", // Logical value: 'true' equals to visitor's opt-in to receive emails
+        "City": "css-selector", // City
+        "Country": "css-selector", // Country
+        "Commentary": "css-selector" // Notes
     },
     contactFields: {
         "FullName": "css-selector", // Name of a contact
