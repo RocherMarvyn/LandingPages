@@ -4,58 +4,51 @@
     <meta charset="UTF-8">
     <!--STEP 2-->
     <!--This part needs to be copied from the STEP 2 field of the lending edit page-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
-    <script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
-    <script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
+<script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
+<script>
 
-    /**
-    * Replace the "css-selector" placeholders in the code below with the element selectors on your landing page.
-    * You can use #id or any other CSS selector that will define the input field explicitly.
-    * Example: "Email": "#MyEmailField".
-    * If you don't have a field from the list below placed on your landing, leave the placeholder or remove the line.
-    */
-    var config = {
+/**
+* Replace the "css-selector" placeholders in the code below with the element selectors on your landing page.
+* You can use #id or any other CSS selector that will define the input field explicitly.
+* Example: "Email": "#MyEmailField".
+* If you don't have a field from the list below placed on your landing, leave the placeholder or remove the line.
+*/
+var config = {
     fields: {
-        "Subject": "#subject-field",
-        "Email": "#email-field",
-        "Name": "#name-field", 
-        "Phone": "#phone-field"    }
-    landingId: "5e97f5ef-bb1a-44bf-8347-2e61e777180b",
+        "Name": "#subject-field", // Name of a visitor, submitting the page
+        "Email": "#email-field", // Visitor's email
+        "MobilePhone": "#phone-field", // Visitor's phone number
+        "Company": "#name-field", // Name of a company (for business landing pages)
+    },
+    landingId: "76152ce5-8046-47af-b46a-ab58b63cdb02",
     serviceUrl: "https://109919-crm-bundle.creatio.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
-    redirectUrl: "https://109919-crm-bundle.creatio.com",
-        onSuccess: function(response) {
-                window.alert(response.resultMessage);
-            },
-            onError: function(response) {
-                window.alert(response.resultMessage);
-            }
-
-        };
-    };
-    /**
-    * The function below creates a object from the submitted data.
-    * Bind this function call to the "onSubmit" event of the form or any other elements events.
-    * Example: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
-    */
-    function createObject() {
+    redirectUrl: ""
+};
+/**
+* The function below creates a object from the submitted data.
+* Bind this function call to the "onSubmit" event of the form or any other elements events.
+* Example: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
+*/
+function createObject() {
     landing.createObjectFromLanding(config);
-    }
-    /**
-    * The function below inits landing page using URL parameters.
-    */
-    function initLanding() {
+}
+/**
+* The function below inits landing page using URL parameters.
+*/
+function initLanding() {
     landing.initLanding(config);
-    }
-    jQuery(document).ready(initLanding);
-    </script>
+}
+jQuery(document).ready(initLanding);
+</script>
     <!--STEP 2-->
 </head>
 <body>
 <h1>Landing web-page</h1>
 <div>
     <h2>Case form</h2>
-    <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
+    <form class="mainForm" name="landingForm" onSubmit="createObject(); return false"">
         Subject:<br>
         <input type="text" name="subject" id="subject-field"><br>
         Email:<br>
