@@ -30,6 +30,8 @@ var config = {
 * Bind this function call to the "onSubmit" event of the form or any other elements events.
 * Example: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
 */
+    var account-field = $("#account option:selected").text();
+    $("#account-field").val(account-field);
 function createObject() {
     landing.createObjectFromLanding(config);
 }
@@ -53,7 +55,7 @@ jQuery(document).ready(initLanding);
         Email:<br>
         <input type="email" name="Email" id="email-field"><br>
         Société : <br>
-        <input type="text" name="Account" id="account-field"><br>
+        <input type="hidden" name="Account" id="account-field"><br>
         <input type="submit" value="Envoyer">
         </font>
     </form>
