@@ -22,8 +22,7 @@ var config = {
         "Email": "#email-field", // Contact's email
         "JobTitle": "#subject-field"
     },
-    customFields: {"WebFormId":"50769e46-3742-4036-bf73-3eef158cb6b1"},
-    landingId: "50769e46-3742-4036-bf73-3eef158cb6b1",
+    landingId: "86579a4a-2a44-4083-beba-9d31333efc35",
     serviceUrl: "https://109919-crm-bundle.creatio.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
     redirectUrl: ""
 };
@@ -50,15 +49,13 @@ jQuery(document).ready(initLanding);
 <div>
     <h2>Case form</h2>
     <form class="mainForm" method="post" name="landingForm" onSubmit="createObject(); return false"">
-        Job Title:<br>
-        <input type="text" name="subject" id="subject-field"><br>
+        Nom complet: <br>
+        <input type="text" name="Subject" id="fullname-field"><br>
         Email:<br>
-        <input type="text" name="Email" id="email-field"><br>
-        Full Name:<br>
-        <input type="text" name="Name" id="name-field"><br>
-        Phone:<br>
-        <input type="text" name="Phone" id="phone-field"><br><br>
-        <input type="submit" value="Submit">
+        <input type="email" name="Email" id="email-field"><br>
+        Société : <br>
+        <input type="text" name="Account" id="account-field"><br>
+        <input type="submit" value="Envoyer">
         </font>
     </form>
 </div>
