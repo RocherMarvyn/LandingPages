@@ -1,5 +1,5 @@
 <script src="https://cdn02.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
-<script src="https://cdn03.jotfor.ms/static/jotform.forms.js?3.3.29519" type="text/javascript"></script>
+<script src="https://cdn03.jotfor.ms/static/jotform.forms.js?3.3.29527" type="text/javascript"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.js"></script>
 <script type="text/javascript">	JotForm.newDefaultTheme = false;
 	JotForm.extendsNewTheme = false;
@@ -17,11 +17,11 @@
    setTimeout(function() {
 JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Formulaire d'inscription ","type":"control_head"},null,null,{"name":"nomEt","qid":"4","text":"Nom et prenom ","type":"control_fullname"},null,{"name":"email","qid":"6","text":"E-mail","type":"control_email"},null,null,null,null,null,null,null,null,null,null,null,null,{"name":"submit","qid":"19","text":"Clear Fields","type":"control_button"},{"name":"submit20","qid":"20","text":"Submit Application","type":"control_button"}]);}, 20); 
 </script>
-<link href="https://cdn01.jotfor.ms/static/formCss.css?3.3.29519" rel="stylesheet" type="text/css" />
+<link href="https://cdn01.jotfor.ms/static/formCss.css?3.3.29527" rel="stylesheet" type="text/css" />
 <style type="text/css">@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
-<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/nova.css?3.3.29519" />
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/nova.css?3.3.29527" />
 <link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/themes/CSS/566a91c2977cdfcd478b4567.css?themeRevisionID=58c6459d9a11c7136a8b4567"/>
-<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/css/styles/payment/payment_feature.css?3.3.29519" />
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/css/styles/payment/payment_feature.css?3.3.29527" />
 <style type="text/css">
     .form-label-left{
         width:150px;
@@ -202,7 +202,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Formulai
     /* Injected CSS Code */
 </style>
 
-<form class="jotform-form" method="post" name="form_213423849174358" id="213423849174358" accept-charset="utf-8" autocomplete="on" onSubmit="createObject(); return false">
+<form class="jotform-form" action="https://submit.jotformeu.com/submit/213423849174358/" method="post" name="form_213423849174358" id="213423849174358" accept-charset="utf-8" autocomplete="on">
   <input type="hidden" name="formID" value="213423849174358" />
   <input type="hidden" id="JWTContainer" value="" />
   <input type="hidden" id="cardinalOrderNumber" value="" />
@@ -295,45 +295,4 @@ for (var i = 0; i < all_spc.length; i++)
     </div>
   </div>
 </form>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
-<script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
-<script>
-
-/**
-* Replace the "css-selector" placeholders in the code below with the element selectors on your landing page.
-* You can use #id or any other CSS selector that will define the input field explicitly.
-* Example: "Email": "#MyEmailField".
-* If you don't have a field from the list below placed on your landing, leave the placeholder or remove the line.
-*/
-var config = {
-    fields: {
-        "Name": "#first_4", // Name of a visitor, submitting the page
-        "Email": "#input_6", // Visitor's email
-        "Commentary": "#last_4" // Notes
-    },
-    contactFields: {
-        "FullName": "##last_4", // Name of a contact
-        "Email": "#input_6" // Contact's email
-    },
-    customFields: {},
-    landingId: "34924737-efcc-4efc-80d2-5728534da17a",
-    serviceUrl: "https://109919-crm-bundle.creatio.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
-    redirectUrl: "https://rochermarvyn.github.io/LandingPages/"};
-/**
-* The function below creates a object from the submitted data.
-* Bind this function call to the "onSubmit" event of the form or any other elements events.
-* Example: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
-*/
-function createObject() {
-    landing.createObjectFromLanding(config);
-}
-/**
-* The function below inits landing page using URL parameters.
-*/
-function initLanding() {
-    landing.initLanding(config);
-}
-jQuery(document).ready(initLanding);
-</script>
+<script type="text/javascript">JotForm.forwardToEu=true;</script>
